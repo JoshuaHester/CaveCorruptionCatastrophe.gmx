@@ -5,13 +5,16 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\genericSprite</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\GUI</object>
     <object>objects\baseObject</object>
     <object>objects\inventory</object>
+    <object>objects\player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testRoom</room>

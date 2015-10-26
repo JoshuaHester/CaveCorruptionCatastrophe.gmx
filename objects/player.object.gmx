@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,40 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//no weapons or armor at start
-for(i=0;i&lt;7;i++){
-    equipmentSlot[i] = baseObject
-}
-//inventory starts empty
-inventorySize = inventory.inventorySize
-detailScreen = false
-
-itemXOffset = 60
-itemBoxSize = 50
-itemYOffset = 40
-
-//equipment slots
-iHeadX = 300
-iHeadY = 150
-iChestX = iHeadX
-iChestY = iHeadY+itemXOffset
-iRightHandX = iChestX-itemXOffset
-iRightHandY = iChestY
-iLeftHandX = iChestX+itemXOffset
-iLeftHandY = iChestY
-iWaistX = iChestX
-iWaistY = iChestY + itemXOffset
-iLegsX = iWaistX
-iLegsY = iWaistY + itemXOffset
-iFeetX = iLegsX
-iFeetY = iLegsY + itemXOffset
-
+            <string>xscale=1
+yscale=1
+rotation=0
+alpha=1
+colour=c_white
+subimg=0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="73">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -75,13 +53,32 @@ iFeetY = iLegsY + itemXOffset
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>detailScreen=!detailScreen
+            <string>currX=x
+currY=y
+//feet
+draw_sprite_ext(inventory.feetSlot.sprite_index,subimg,currX,currY,xscale,yscale,rotation,colour,alpha)
+//legs
+currY=currY-4
+draw_sprite_ext(inventory.legSlot.sprite_index,subimg,currX,currY,xscale,yscale,rotation,colour,alpha)
+//waist
+currY=currY-8
+draw_sprite_ext(inventory.waistSlot.sprite_index,subimg,currX,currY,xscale,yscale,rotation,colour,alpha)
+//chest
+currY=currY-3
+draw_sprite_ext(inventory.chestSlot.sprite_index,subimg,currX,currY,xscale,yscale,rotation,colour,alpha)
+//right
+draw_sprite_ext(inventory.chestSlot.sprite_index,subimg,currX-6,currY,xscale,yscale,rotation,colour,alpha)
+//left
+draw_sprite_ext(inventory.chestSlot.sprite_index,subimg,currX+6,currY,xscale,yscale,rotation,colour,alpha)
+//head
+currY=currY-8
+draw_sprite_ext(inventory.headSlot.sprite_index,subimg,currX,currY,xscale,yscale,rotation,colour,alpha)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="9" enumb="39">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -98,39 +95,7 @@ iFeetY = iLegsY + itemXOffset
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>currX = itemXOffset
-currY = itemYOffset
-for(i=0;i&lt;inventorySize;i++){
-    draw_set_colour(c_blue)
-    draw_rectangle(currX,currY,currX+itemBoxSize,currY+itemBoxSize,true)
-    draw_sprite(inventory.inventorySlot[i].sprite_index,0,currX,currY)
-    currX=currX+itemXOffset
-}
-if(!detailScreen){
-    draw_text(20,20,"Press [I] to open equipment screen")
-}else{
-    draw_rectangle(iHeadX,iHeadY,iHeadX+itemBoxSize,iHeadY+itemBoxSize,true)
-    draw_sprite(inventory.headSlot.sprite_index,0,iHeadX,iHeadY)
-    
-    draw_rectangle(iChestX,iChestY,iChestX+itemBoxSize,iChestY+itemBoxSize,true)
-    draw_sprite(inventory.chestSlot.sprite_index,0,iChestX,iChestY)
-    
-    draw_rectangle(iRightHandX,iRightHandY,iRightHandX+itemBoxSize,iRightHandY+itemBoxSize,true)
-    draw_sprite(inventory.rightHSlot.sprite_index,0,iRightHandX,iRightHandY)
-    
-    draw_rectangle(iLeftHandX,iLeftHandY,iLeftHandX+itemBoxSize,iLeftHandY+itemBoxSize,true)
-    draw_sprite(inventory.leftHSlot.sprite_index,0,iLeftHandX,iLeftHandY)
-    
-    draw_rectangle(iWaistX,iWaistY,iWaistX+itemBoxSize,iWaistY+itemBoxSize,true)
-    draw_sprite(inventory.waistSlot.sprite_index,0,iWaistX,iWaistY)
-    
-    draw_rectangle(iLegsX,iLegsY,iLegsX+itemBoxSize,iLegsY+itemBoxSize,true)
-    draw_sprite(inventory.leftHSlot.sprite_index,0,iLegsX,iLegsY)
-    
-    draw_rectangle(iFeetX,iFeetY,iFeetX+itemBoxSize,iFeetY+itemBoxSize,true)
-    draw_sprite(inventory.feetSlot.sprite_index,0,iFeetX,iFeetY)
-    
-}
+            <string>speed=1
 </string>
           </argument>
         </arguments>
