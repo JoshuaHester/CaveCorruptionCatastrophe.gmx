@@ -11,6 +11,7 @@
   <objects name="objects">
     <object>objects\GUI</object>
     <object>objects\baseObject</object>
+    <object>objects\inventory</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testRoom</room>

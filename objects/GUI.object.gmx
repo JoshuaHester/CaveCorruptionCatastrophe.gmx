@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -30,10 +30,7 @@ for(i=0;i&lt;7;i++){
     equipmentSlot[i] = baseObject
 }
 //inventory starts empty
-inventorySize = 10
-for(i=0;i&lt;inventorySize;i++){
-    inventorySlot[i] = baseObject
-}
+inventorySize = inventory.inventorySize
 detailScreen = false
 
 itemXOffset = 60
