@@ -8,6 +8,13 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\GUI</object>
+    <object>objects\baseObject</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\testRoom</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
