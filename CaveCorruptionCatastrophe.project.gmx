@@ -7,14 +7,26 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\genericSprite</sprite>
+    <sprite>sprites\skeletonThrowSprite</sprite>
+    <sprite>sprites\skeletonWalkSprite</sprite>
+    <sprite>sprites\slimeMonsterSprite</sprite>
+    <sprite>sprites\boneSprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\detectPlayer.gml</script>
+    <script>scripts\wander.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\GUI</object>
     <object>objects\baseObject</object>
     <object>objects\inventory</object>
     <object>objects\player</object>
+    <object>objects\skeleton</object>
+    <object>objects\baseMonster</object>
+    <object>objects\slimeMonster</object>
+    <object>objects\bone</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\testRoom</room>

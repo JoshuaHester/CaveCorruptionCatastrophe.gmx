@@ -55,6 +55,8 @@
     <instance objName="GUI" x="96" y="64" name="inst_A955AAE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="baseObject" x="32" y="288" name="inst_9B05249D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player" x="320" y="320" name="inst_A8E7834D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="skeleton" x="544" y="96" name="inst_EC3B1F0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slimeMonster" x="512" y="448" name="inst_EB7096E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
