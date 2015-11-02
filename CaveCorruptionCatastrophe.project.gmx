@@ -11,12 +11,15 @@
     <sprite>sprites\skeletonWalkSprite</sprite>
     <sprite>sprites\slimeMonsterSprite</sprite>
     <sprite>sprites\boneSprite</sprite>
+    <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\detectPlayer.gml</script>
     <script>scripts\wander.gml</script>
+    <script>scripts\chooseRoom.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\GUI</object>
@@ -27,9 +30,12 @@
     <object>objects\baseMonster</object>
     <object>objects\slimeMonster</object>
     <object>objects\bone</object>
+    <object>objects\door</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\startRoom</room>
     <room>rooms\testRoom</room>
+    <room>rooms\hallway1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
